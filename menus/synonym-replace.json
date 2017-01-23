@@ -3,7 +3,11 @@
     "atom-text-editor": [
       {
         "label": "Replace selected text with synonym",
-        "command": "synonym-replace:fetch"
+        "command": "synonym-replace:fetchSynonym"
+      },
+      {
+        "label": "Replace selection with english translation",
+        "command": "synonym-replace:translate"
       }
     ]
   },
@@ -15,8 +19,12 @@
           "label": "synonym-replace",
           "submenu": [
             {
-              "label": "Toggle",
-              "command": "synonym-replace:fetch"
+              "label": "Replace selection with synonym",
+              "command": "synonym-replace:fetchSynonym"
+            },
+            {
+              "label": "Replace selection with english translation",
+              "command": "synonym-replace:translate"
             }
           ]
         }

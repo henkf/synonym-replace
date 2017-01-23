@@ -15,7 +15,7 @@ describe('SynonymReplace', () => {
     activationPromise = atom.packages.activatePackage('synonym-replace');
   });
 
-  describe('when the synonym-replace:toggle event is triggered', () => {
+  describe('when the synonym-replace:fetchSynonym event is triggered', () => {
     it('hides and shows the modal panel', () => {
       // Before the activation event the view is not on the DOM, and no panel
       // has been created
@@ -23,7 +23,7 @@ describe('SynonymReplace', () => {
 
       // This is an activation event, triggering it will cause the package to be
       // activated.
-      atom.commands.dispatch(workspaceElement, 'synonym-replace:toggle');
+      atom.commands.dispatch(workspaceElement, 'synonym-replace:fetchSynonym');
 
       waitsForPromise(() => {
         return activationPromise;
@@ -37,7 +37,7 @@ describe('SynonymReplace', () => {
 
         let synonymReplacePanel = atom.workspace.panelForItem(synonymReplaceElement);
         expect(synonymReplacePanel.isVisible()).toBe(true);
-        atom.commands.dispatch(workspaceElement, 'synonym-replace:toggle');
+        atom.commands.dispatch(workspaceElement, 'synonym-replace:fetchSynonym');
         expect(synonymReplacePanel.isVisible()).toBe(false);
       });
     });
@@ -55,7 +55,7 @@ describe('SynonymReplace', () => {
 
       // This is an activation event, triggering it causes the package to be
       // activated.
-      atom.commands.dispatch(workspaceElement, 'synonym-replace:toggle');
+      atom.commands.dispatch(workspaceElement, 'synonym-replace:fetchSynonym');
 
       waitsForPromise(() => {
         return activationPromise;
@@ -65,7 +65,7 @@ describe('SynonymReplace', () => {
         // Now we can test for view visibility
         let synonymReplaceElement = workspaceElement.querySelector('.synonym-replace');
         expect(synonymReplaceElement).toBeVisible();
-        atom.commands.dispatch(workspaceElement, 'synonym-replace:toggle');
+        atom.commands.dispatch(workspaceElement, 'synonym-replace:fetchSynonym');
         expect(synonymReplaceElement).not.toBeVisible();
       });
     });
