@@ -1,0 +1,26 @@
+{
+  "context-menu": {
+    "atom-text-editor": [
+      {
+        "label": "Replace selected text with synonym",
+        "command": "synonym-replace:fetch"
+      }
+    ]
+  },
+  "menu": [
+    {
+      "label": "Packages",
+      "submenu": [
+        {
+          "label": "synonym-replace",
+          "submenu": [
+            {
+              "label": "Toggle",
+              "command": "synonym-replace:fetch"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
