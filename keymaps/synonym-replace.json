@@ -1,5 +1,5 @@
 {
   "atom-workspace": {
-    "ctrl-alt-o": "synonym-replace:toggle"
+    "ctrl-alt-o": "synonym-replace:fetchSynonym"
   }
 }
