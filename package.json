@@ -1,7 +1,7 @@
 {
   "name": "synonym-replace",
   "main": "./lib/synonym-replace",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A small plugin that looks up synonyms for a selected word and inserts the selection in place.",
   "keywords": [],
   "activationCommands": {
